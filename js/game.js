@@ -23,7 +23,7 @@ const config = {
   //set background color
   backgroundColor: 0x5f6e7a,
   scale: {
-    mdoe: Phasers.Scale.FIT,
+    mdoe: Phaser.Scale.FIT,
     // we place it in the middle of the page.
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
