@@ -8,7 +8,7 @@
 
 //scene import statements
 import SplashScene from "./splashScene.js";
-import TitleScene from "./titleScene.js"
+import TitleScene from "./titleScene.js";
 
 // create the new scenes
 const splashScene = new SplashScene();
