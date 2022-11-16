@@ -55,6 +55,9 @@ create(data);
  * @param {number} delta - The delta time in ms since the last frame
  */
 update(time, delta);
+  this.scene.switch("titleScene")
 {
   // pass
 }
+
+export default SplashScene
