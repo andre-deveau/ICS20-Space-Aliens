@@ -14,7 +14,7 @@ class TitleScene extends Phaser.Scene {
    * This method is the constructor
    */
   constructor() {
-    super({ key: "titleScene" });
+    super({ key: "titleScene" })
   }
 
   /**
@@ -24,7 +24,7 @@ class TitleScene extends Phaser.Scene {
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start()
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("ffffff");
+    this.cameras.main.setBackgroundColor("ffffff")
   }
 
   /**
@@ -32,7 +32,7 @@ class TitleScene extends Phaser.Scene {
    * Use it to load assets
    */
   preload() {
-    console.log("Title Scene");
+    console.log("Title Scene")
   }
 
   /**
@@ -51,7 +51,7 @@ class TitleScene extends Phaser.Scene {
    * @param {number} delta - The delta time in ms since the last frame
    */
   update(time, delta) {
-    this.scene.switch("titleScene");
+    this.scene.switch("titleScene")
   }
 }
 
