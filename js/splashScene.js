@@ -50,7 +50,7 @@ class SplashScene extends Phaser.Scene {
       "splashSceneBackground"
     )
     this.splashSceneBackgroundImage.x = 1920 / 2
-    this.splashSceneBackgroundImage.x = 1080 / 2
+    this.splashSceneBackgroundImage.y = 1080 / 2
   }
 
   /**
