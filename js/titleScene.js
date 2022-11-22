@@ -9,7 +9,7 @@
 /**
  * This class is the Splash Scene
  */
-class SplashScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
   /**
    * This method is the constructor
    */
@@ -55,4 +55,4 @@ class SplashScene extends Phaser.Scene {
   }
 }
 
-export default TitleScene;
+export default TitleScene
