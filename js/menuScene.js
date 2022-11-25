@@ -17,6 +17,7 @@
       super({ key: "menuScene" })
   
       this.splashSceneBackgroundImage = null
+      this.startButton = null 
     }
   
     /**
@@ -34,7 +35,9 @@
      * Use it to load assets.
      */
     preload() {
-        console.log("Menu Scene")
+      console.log("Menu Scene")
+      this.load.image("menuSceneBackground", "./assets/aliens_screen_image2.jpg")
+      this.load.image("startButton", "./assets/start.png")
     }
 
     /**
@@ -43,7 +46,13 @@
      * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
      */
     create(data) {
-        // pass
+      this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
+      this.menuSceneBackgroundImage.x = 1920 / 2
+      this.menuSceneBackgroundImage.y = 1080 / 2
+
+      this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
+      this.startButton.setInteractive({ useHandCursor: true })
+      this.startButton.on("pointerdown", () => this.clickButton())
     }
 
     /**
@@ -54,6 +63,10 @@
      */
     update(time, delta) {
         //pass
+    }
+
+    clickButton() {
+      this.scene.start("gameScene")
     }
  }
  
