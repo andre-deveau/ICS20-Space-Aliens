@@ -60,7 +60,21 @@
      * @param {number} delta - The delta time in ms since the last frame
      */
     update(time, delta) {
-      // pass
+      const keyLeftObj = this.input.addKey("LEFT")
+      const keyRightObj = this.input.addKey("RIGHT")
+
+      if (keyLeftObj.isDown === true) {
+        this.ship.x -= 15
+        if (this.ship.x < 0) {
+          this.ship.x = 0
+        }
+      }
+      if (keyRightObj.isDown == true) {
+        this.ship.x += 15
+        if (this.ship.x < 0) {
+          this.ship.x = 1920
+        }
+      }
     }
   }
   
