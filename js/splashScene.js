@@ -9,42 +9,40 @@
 /**
  * This class is the menu scene
  */
-class MenuScene extends Phaser.Scene {
+class SplashScene extends Phaser.Scene {
   /**
    * This method is the constructor
    */
   constructor() {
-    super({ key: "menuScene" })
-    
-    this.menuSceneBackgroundImage = null
-    this.startButton = null
-    }
+    super({ key: "splashScene" });
+
+    this.splashSceneBackgroundImage = null
+  }
 
   init(data) {
     this.cameras.main.setBackgroundColor("#ffffff")
   }
 
   preload() {
-    console.log("Menu Scene")
-    this.load.image("menuSceneBackground", "./assets/aliens_screen_image2.jpg")
-    this.load.image("startButton", "./assets/start.png")
+    console.log("Splash Scene")
+    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png")
   }
 
   create(data) {
-    this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
-    this.menuSceneBackgroundImage.x = 1920 / 2
-    this.menuSceneBackgroundImage.y = 1080 / 2
-
-    this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
-    this.startButton.setInteractive({ useHandCursor: true })
-    this.startButton.on("pointerdown", () => this.clickButton())
+    this.splashSceneBackgroundImage = this.add.sprite(
+      0,
+      0,
+      "splashSceneBackground"
+    );
+    this.splashSceneBackgroundImage.x = 1920 / 2
+    this.splashSceneBackgroundImage.y = 1080 / 2
   }
 
   update(time, delta) {
-  }
-
-  clickButton() {
-    this.scene.start("gameScene")
+    if (time > 3000) {
+      this.scene.switch("titleScene")
+    }
   }
 }
-export default MenuScene
+
+export default SplashScene
